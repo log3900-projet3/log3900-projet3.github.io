@@ -3,38 +3,90 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
+  
+  	<!-- Ceci permet d'inclure les fichiers JavaScript de jQuery, jQuery UI, Google Maps ainsi que map.js -->
+			
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="search.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o&amp;sensor=false"></script>
+			
   <title></title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1404.34">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 48.0px Times; color: #FFCBA4; -webkit-text-stroke: #000000}
+    p.p1 {margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 48.0px Times; color: #F75D59; -webkit-text-stroke: #000000}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 28.0px; font: 11.0px '.AppleSystemUIFont'; color: #000000; -webkit-text-stroke: #000000}
     p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 16.0px Times; color: #F75D59; -webkit-text-stroke: #000000}
     p.p4 {margin: 0.0px 0.0px 14.0px 0.0px; line-height: 20.0px; font: 14.0px Times; color: #E77471; -webkit-text-stroke: #000000}
-    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 14.0px 0.0px; line-height: 14.0px; font: 14.0px Times; color: #E77471; -webkit-text-stroke: #000000}
     span.s1 {font-kerning: none}
-    span.s2 {font: 24.0px Times; font-kerning: none}
+    button.s2 {font-kerning: none; background-color: #FFFFFF; font: 12.0px Times; color: #87AFC7;}
     button.s3 {font-kerning: none; background-color: #FFCBA4}
     span.Apple-tab-span {white-space:pre}
     ul.ul1 {list-style-type: disc}
   </style>
 </head>
 <body>
-<p style="margin-left: 300px" align="left" class="p1"></title> Pokémon Pinball 2.0</title></p>
-<img src = "pokemonwow.jpg" alt="Pokemon" width = "993" height = "349">
-<p style="margin-left: 340px" align="left" class="p2"><button class="s3">Profils de joueurs</button><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button class="s3">Règlements</button></p>
-<p class="p3"><span class="s1"><br>
-</span></p>
-<p style="margin-left: 150px" align="left" class="p4"><span class="s1">Voici le profil de notre meilleur joueur! Vous pouvez chercher le profils de votre choix en cherchant le username du joueur.</span></p><br>
-<p style="margin-left: 400px" align="left"><img src = "200.gif" alt = "avatar" height = "175" width = "175"></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"><span class="Apple-converted-space"> </span>**photo d’avatar**</span></p> 
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"><span class="Apple-converted-space"> </span>nom d'utilisateur:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>Vanouuu</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"><span class="Apple-converted-space"> </span> </span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1"> nombre de parties jouées:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1">nombre de parties gagnées:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1"> ratio victoires/défaites:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1"> nombre de balles perdues:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1">   nombre de points à vie:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
-<p style="margin-left: 400px" align="left" class="p3"><span class="s1"></span><span class="s1">                   succès:</span><span class="Apple-tab-span">	</span><span class="s1"><span class="Apple-converted-space"> </span>N/A</span></p>
+<p align="center" class="p1"></title> Pokémon Pinball 2.0</title></p>
+<p align="center"><img src = "pokemonwow.jpg" alt="Pokemon" width = "993" height = "349"></p>
+<p align="center" class="p2"><button id=buttonJoueur class="s3">Profils de joueurs</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id = buttonReglement class="s3">Règlements</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id=buttonCredits class="s3">Credits</button></p><br>
+
+<div id = rechercheJoueur>
+<p align="center" class="p4"><span class="s1">Vous pouvez chercher le profils de votre choix en cherchant le username du joueur.</span> <span class="Apple-tab-span">	</span><input type = "text" name = "textEn" id = "input" size = "45" height = "26"><img src = "icone_search.png" alt="loupe" width = "20" height = "17"></p><br>
+</div>
+
+<div id=profilsJoueurInit >
+<p align="center" class="p4"><span class="s1">Voici le profil de notre meilleur joueur!</span></p>
+<p align="center"><img src = "200.gif" alt = "avatar" height = "150" width = "100"></p>
+<p align="center" class="p3"><span class="s1">nom d'utilisateur:</span><span class="Apple-tab-span">	</span><span id=varNom class="s1">Vanouuu</span></p><br>
+<p align="center" class="p3"><span class="s1"></span><span class="s1">  nombre de parties jouées:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+<p align="center" class="p3"><span class="s1"></span><span class="s1">nombre de parties gagnées:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+<p align="center" class="p3"><span class="s1"></span><span class="s1">  ratio victoires/défaites:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+<p align="center" class="p3"><span class="s1"></span><span class="s1"> nombre de balles perdues:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+<p align="center" class="p3"><span class="s1"></span><span class="s1">   nombre de points à vie:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+<p align="center" class="p3"><span class="s1"></span><span class="s1">                   succès:</span><span class="Apple-tab-span">	</span><span class="s1">N/A</span></p>
+</div>
+
+
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span id=txtLourd class="s1">Les réglements du client lourd</span><span class="Apple-tab-span">	</span><button id = buttonPlus1 class="s2">[+]</button></p>
+<div id=regleClientLourd >
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+</div>
+
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span id=txtLeger class="s1">Les réglements du client léger</span><span class="Apple-tab-span">	</span><button id = buttonPlus2 class="s2">[+]</button></p>
+<div id=regleClientLeger>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+</div>
+
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span id=txtChat class="s1">Les réglements du clavardage </span><span class="Apple-tab-span">	</span><button id = buttonPlus3 class="s2">[+]</button></p>
+<div id=regleChat>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+</div>
+
+<div id=pageCredits>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">bla</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+<p style="margin-left: 250px" align="left" class="p5"><span class="s1"></span><span class="s1">blu</span></p>
+</div>
+
 </body>
 </html>
