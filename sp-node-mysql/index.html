@@ -30,15 +30,14 @@
 	<body>
 		<p align="center" class="p1"></title> Pokémon Pinball 2.0</title></p>
 		<p align="center"><img src = "/images/pokemonwow.jpg" alt="Pokemon" width = "993" height = "349"></p>
-		<p align="center" class="p2"><button id=buttonJoueur class="s3" >Recherche</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id = buttonListe class="s3">Profils de joueurs</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id=buttonCredits class="s3">Credits</button></p><br>
+		<p align="center" class="p2"><button id=buttonRecherche class="s3" >Recherche</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id = buttonListe class="s3">Profils de joueurs</button><span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><button id=buttonCredits class="s3">Credits</button></p><br>
 
 		<div id = rechercheJoueur>
 			<p align="center" class="p4"><span class="s1">Vous pouvez chercher le profils de votre choix en cherchant le username du joueur.</span> <span class="Apple-tab-span">	</span><br>
-			<input type = "text" name = "textEn" id = "input" size = "45" height = "26"><button id=searchJoueur class="s4" ><img src = "/images/icone_search.png" alt="loupe" width = "20" height = "17"></button></p><br>
+			<input type = "text" name = "textEn" placeholder="entrer le nom d'utilisateur ici" id = "input" size = "45" height = "26"><button id=searchJoueur class="s4" ><img src = "/images/icone_search.png" alt="loupe" width = "20" height = "17"></button></p><br>
 		</div>
 
 		<div id=profilsJoueur >
-			<p align="center"><img src = "/images/200.gif" alt = "avatar" height = "150" width = "100"></p>
 			<p align="center" class="p3"><span class="s1">nom d'utilisateur:</span><span class="Apple-tab-span">	</span><label id=varNom class="s2">N/A</label></p><br>
 			<p align="center" class="p3"><span class="s1"></span><span class="s1">nombre de parties jouées:</span><span class="Apple-tab-span">	</span><label id = nbJouer class="s2">N/A</label></p>
 			<p align="center" class="p3"><span class="s1"></span><span class="s1">nombre de parties gagnées:</span><span class="Apple-tab-span">	</span><label id = nbGagner class="s2">N/A</label></p>
@@ -48,6 +47,9 @@
 			<p align="center" class="p3"><span class="s1"></span><span class="s1">succès:</span><span class="Apple-tab-span">	</span><label id = succes class="s2">N/A</label></p>
 		</div>
 
+		<div id=profilsPrive >
+			<p align="center" class="p3"><span class="s1"></span><span class="s1">Le profils de cet usager est privé!</span></p>
+		</div>
 
 		<p align="center" class="p5"><span class="s1"></span><span id=txtListe class="s1">Voici la liste de tous nos usagers!</span><span class="Apple-tab-span">	</span></p>
 		<div align = "center" id=listeUsername>
